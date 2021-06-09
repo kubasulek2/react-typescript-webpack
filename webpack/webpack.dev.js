@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
@@ -10,7 +11,8 @@ module.exports = {
 		new webpack.DefinePlugin({
 			'process.env.name': JSON.stringify('Kuba')
 		}),
-		new ReactRefreshWebpackPlugin()
+		new ReactRefreshWebpackPlugin(),
+		new ForkTsCheckerWebpackPlugin()
 	],
 	devServer: {
 		hot: true,
