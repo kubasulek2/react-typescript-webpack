@@ -8,5 +8,14 @@
 			}
 		],
 		"@babel/preset-typescript"
+	],
+	/* lets you use async await */
+	"plugins": [
+		[
+			"@babel/plugin-transform-runtime",
+			{
+				"regenerator": true
+			}
+		]
 	]
 }
